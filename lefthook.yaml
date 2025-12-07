@@ -1,0 +1,13 @@
+pre-push:
+  parallel: true
+  commands:
+    type-check:
+      run: bun type:check
+    spell-check:
+      run: bun spell:check
+pre-commit:
+  commands:
+    check:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: bun format:fix
+      stage_fixed: true

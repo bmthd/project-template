@@ -1,24 +1,50 @@
 {
-  "name": "pr",
+  "name": "project-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "biome lint .",
+    "format:check": "biome format ./src",
+    "format:fix": "biome format --write ./src",
+    "lint:check": "biome lint ./src",
+    "lint:fix": "biome lint ./src --fix",
+    "type:check": "bunx @typescript/native-preview --noEmit",
+    "spell:check": "cspell . --gitignore --config cspell.config.json",
+    "test": "vitest",
+    "test:check": "vitest run",
+    "check:all": "bun run-p '*:check'",
+    "fix:all": "bun run-s '*:fix'",
+    "typecheck": "next typegen && bun tsgo --noemit",
+    "similarity": "similarity-ts",
+    "knip": "bunx knip"
   },
   "dependencies": {
+    "@next/third-parties": "^16.0.7",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "@yamada-ui/react": "^2.0.5",
     "next": "16.0.7",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "valibot": "^1.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/browser-playwright": "^4.0.15",
+    "@vitest/coverage-v8": "^4.0.15",
+    "@yamada-ui/cli": "^2.0.5",
+    "cspell": "^9.4.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
-    "typescript": "^5"
+    "npm-run-all2": "^8.0.4",
+    "typescript": "^5",
+    "vitest": "^4.0.15",
+    "vitest-browser-react": "^2.0.2"
   }
 }

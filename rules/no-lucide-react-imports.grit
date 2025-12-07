@@ -1,0 +1,6 @@
+language js
+
+`import { $names } from $pkg` where {
+  $pkg <: `"lucide-react"`,
+  register_diagnostic(span=$pkg, message="Do not import from 'lucide-react' directly. Import icons from '~/ui' with Icon suffix instead. For example: import { ActivityIcon } from '~/ui'", severity="error")
+}

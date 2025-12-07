@@ -1,0 +1,22 @@
+language js
+
+or {
+  `<$tag />`,
+  `<$tag $_ />`,
+  `<$tag>$_</$_>`,
+  `<$tag $_>$_</$_>`
+} where {
+  $tag <: r"^[a-z][a-z0-9-]*$",
+  // Exclude HTML document structure elements that cannot be replaced with Yamada UI
+  $tag <: not or {
+    "html",
+    "head",
+    "meta",
+    "title",
+    "link",
+    "script",
+    "style",
+    "body"
+  },
+  register_diagnostic(span=$tag, message="Do not use direct DOM elements like '<$tag>'. Use Yamada UI components from '~/ui' instead. For example, use <Box> instead of <div>, <Text> instead of <span>, etc.", severity="error")
+}
