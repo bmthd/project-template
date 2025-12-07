@@ -1,3 +1,3 @@
-import { defineTokens } from "@yamada-ui/react"
+import { defineTokens } from "@yamada-ui/react";
 
-export const animations = defineTokens.animations({})
+export const animations = defineTokens.animations({});
