@@ -7,7 +7,12 @@
 		"/project-words.txt",
 		"package.json",
 		"*.svg",
-		"src/ui/registry.json"
+		"src/ui/registry.json",
+        "src/theme/registry.json",
+        "src/theme/styles/reset-style.ts",
+        "src/theme/tokens/**"
 	],
-	"ignoreWords": ["lucide"]
+	"ignoreWords": [
+		"lucide",
+	]
 }
