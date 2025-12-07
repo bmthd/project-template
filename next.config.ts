@@ -1,3 +1,6 @@
 import type { NextConfig } from "next";
 
-export default {} satisfies NextConfig;
+export default {
+	reactStrictMode: true,
+	reactCompiler: true,
+} satisfies NextConfig;
