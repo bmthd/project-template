@@ -1,0 +1,67 @@
+name: Quality
+
+on: pull_request
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v5
+
+      - name: Setup
+        uses: ./.github/actions/setup
+          
+      - name: Run format check 🖌
+        run: bun run format:check
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v5
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Run lint check 🧹
+        run: bun run lint:check
+
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v5
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Run type check 🔍
+        run: bun run type:check
+
+  spell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v5
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Run spell check 📝
+        run: bun run spell:check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v5
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Install Playwright browsers 🎭
+        run: bunx playwright install chromium
+
+      - name: Run tests 🧪
+        run: bun run test:check
