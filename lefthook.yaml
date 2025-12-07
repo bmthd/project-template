@@ -6,8 +6,9 @@ pre-push:
     spell-check:
       run: bun spell:check
 pre-commit:
+  parallel: true
   commands:
-    check:
+    format:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: bun format:fix
       stage_fixed: true

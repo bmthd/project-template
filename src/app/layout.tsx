@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { config, theme } from "@/theme";
 import { ColorModeScript, UIProvider } from "@/ui";
 
 const geistSans = Geist({
@@ -26,7 +27,9 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
 				<ColorModeScript />
-				<UIProvider>{children}</UIProvider>
+				<UIProvider theme={theme} config={config}>
+					{children}
+				</UIProvider>
 			</body>
 		</html>
 	);

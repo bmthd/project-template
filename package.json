@@ -18,7 +18,8 @@
 		"check:all": "bun run-p '*:check'",
 		"fix:all": "bun run-s '*:fix'",
 		"similarity": "similarity-ts",
-		"knip": "bunx knip"
+		"knip": "bunx knip",
+		"prepare": "lefthook install"
 	},
 	"dependencies": {
 		"@next/third-parties": "^16",
@@ -43,6 +44,7 @@
 		"cspell": "^9",
 		"eslint": "^9",
 		"eslint-config-next": "^16",
+		"lefthook": "^2.0.8",
 		"npm-run-all2": "^8",
 		"typescript": "^5",
 		"vitest": "^4",
