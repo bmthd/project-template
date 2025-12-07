@@ -64,4 +64,4 @@ jobs:
         run: bunx playwright install chromium
 
       - name: Run tests 🧪
-        run: bun run test:check
+        run: bun run test
