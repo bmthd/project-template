@@ -23,7 +23,7 @@
 	},
 	"dependencies": {
 		"@next/third-parties": "^16",
-		"@praha/byethrow": "^0.8.1",
+		"@praha/byethrow": "^0.9.0",
 		"@t3-oss/env-nextjs": "^0.13",
 		"@yamada-ui/react": "^2",
 		"babel-plugin-react-compiler": "^1.0.0",
