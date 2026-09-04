@@ -43,7 +43,7 @@
 		"@vitest/browser-playwright": "^4",
 		"@vitest/coverage-v8": "^4",
 		"@yamada-ui/cli": "^2",
-		"cspell": "^9",
+		"cspell": "^10.0.0",
 		"eslint": "^9",
 		"eslint-config-next": "^16",
 		"lefthook": "^2.0.8",
