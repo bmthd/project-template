@@ -39,7 +39,7 @@
 		"@types/node": "^24",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"@vitejs/plugin-react": "^5",
+		"@vitejs/plugin-react": "^6.0.0",
 		"@vitest/browser-playwright": "^4",
 		"@vitest/coverage-v8": "^4",
 		"@yamada-ui/cli": "^2",
