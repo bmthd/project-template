@@ -40,8 +40,8 @@
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"@vitejs/plugin-react": "^5",
-		"@vitest/browser-playwright": "^4",
-		"@vitest/coverage-v8": "^4",
+		"@vitest/browser-playwright": "^5.0.0",
+		"@vitest/coverage-v8": "^5.0.0",
 		"@yamada-ui/cli": "^2",
 		"cspell": "^9",
 		"eslint": "^9",
@@ -49,7 +49,7 @@
 		"lefthook": "^2.0.8",
 		"npm-run-all2": "^8",
 		"typescript": "^6.0.0",
-		"vitest": "^4",
+		"vitest": "^5.0.0",
 		"vitest-browser-react": "^2"
 	}
 }
